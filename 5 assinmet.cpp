@@ -9,10 +9,14 @@
 /*it is short for charachter which is a data type that holds one
  *charachter, and the number is its maximum allowed length*/
 using namespace std;
+/*A node is a struct with at least a data field and a reference to a node
+ *of the same type A node is called a self-referential object, since it
+ *contains a pointer to a variable that refers to a variable of the same type*/
 struct Node {
 	int data;
 	struct Node *next;
 };
+/* is a pointer variable (undefined value) of " Node " datatype*/
 struct Node* top = NULL;
 void push(int val) {
 	struct Node* newnode = (struct Node*) malloc(sizeof(struct Node));
@@ -20,6 +24,8 @@ void push(int val) {
 	newnode->next = top;
 	top = newnode;
 }
+/*A node is a struct with at least a data field and a reference to a node
+ *of the same type*/
 struct node {
 	int info;
 	struct node *next;
@@ -188,6 +194,8 @@ void list::search() {
 	cin>>value;
 	struct node *s;
 	s = start;
+/*	 while loop statement repeatedly executes a target statement as
+ *  long as a given condition is true*/
 	while (s != NULL) {
 		pos++;
 		if (s->info == value) {
@@ -197,6 +205,8 @@ void list::search() {
 		s = s->next;
 	}
 	if (!flag)
+	/* Flag variable is used as a signal in programming to let the
+	 *program know that a certain condition has met*/
 	cout<<"\nElement "<<value<<" not found in the list"<<endl;
 }
 /*function to display element*/
@@ -282,7 +292,10 @@ int A;
  *of the execution and we do so by returning zero at the end of
  *the program and it means the success of the program*/
 int main(){
-	cout << "1 for Linked List, 2 for Stack, 3 for Queue, 4 for exit";
+	cout<<"1 for Linked List"<<endl;
+	cout<<"2 for Stack"<<endl;
+	cout<<"3 for Queue"<<endl;
+	cout<<"4 for exit"<<endl;
 	cout << "\n\nWhat data structure type do you want: ";
 	cin>>A;
 	/*if statement allows you to control if a program could enter a section
@@ -297,6 +310,7 @@ int main(){
 		/*run code continuosly until it is breaked*/
 			cout << "\nEnter your choice : ";
 			cin >> ch;
+			/*making an exception for error that user may fal on it*/
 			if (isdigit(ch) == 1) {
 				throw "You can only use integer";
 			}
@@ -329,6 +343,7 @@ int main(){
 			if (isdigit(ch) == 1) {
 				throw "You can only use integer";
 			}
+			/*making an exception for error that user may fal on it*/
 			else if (isdigit(val) == 1) {
 				throw "You can only use integer";
 			}
@@ -363,6 +378,7 @@ int main(){
 		list sl;
 		/*make variable for holing list value*/
 			start = NULL;
+			/*making an exception for error that user may fal on it*/
 			if (isdigit(choice) == 1) {
 				throw "You can only use integer";
 			}
