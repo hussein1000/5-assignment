@@ -297,7 +297,7 @@ int main(){
 		/*run code continuosly until it is breaked*/
 			cout << "\nEnter your choice : ";
 			cin >> ch;
-			if (isdigit(ch) == 0) {
+			if (isdigit(ch) == 1) {
 				throw "You can only use integer";
 			}
 			switch (ch) {
