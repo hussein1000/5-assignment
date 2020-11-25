@@ -297,6 +297,9 @@ int main(){
 		/*run code continuosly until it is breaked*/
 			cout << "\nEnter your choice : ";
 			cin >> ch;
+			if (isdigit(ch) == 0) {
+				throw "You can only use integer";
+			}
 			switch (ch) {
 			/*switch for options when press keys*/
 				case 1: Insert();
