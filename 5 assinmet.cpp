@@ -326,6 +326,12 @@ int main(){
 		/*run code continuosly until it is breaked*/
 			cout << "\n\nEnter your choice: ";
 			cin >> ch;
+			if (isdigit(ch) == 1) {
+				throw "You can only use integer";
+			}
+			else if (isdigit(val) == 1) {
+				throw "You can only use integer";
+			}
 			switch(ch) {
 			/*switch for options when press keys*/
 				case 1: {
@@ -357,6 +363,9 @@ int main(){
 		list sl;
 		/*make variable for holing list value*/
 			start = NULL;
+			if (isdigit(choice) == 1) {
+				throw "You can only use integer";
+			}
 			/*loop forever until condition is met*/
 			while (1)
 			{
